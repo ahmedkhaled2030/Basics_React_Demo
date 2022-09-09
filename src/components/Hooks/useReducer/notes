@@ -1,0 +1,3 @@
+**it the same concept of Redux But state management locally in the same component
+**useReducer The same as useState but used if the state is complex such as objects etc
+**used commonly in unit testing as it has a standalone scope in component

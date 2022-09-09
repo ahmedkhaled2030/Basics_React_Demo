@@ -1,0 +1,5 @@
+const {createStore , combineReducers } = Redux
+
+combineReducers =>  function provided by redux and
+ purpose of the combined reducers function is to take a list of different reducers and wire them all up together
+into one cohesive unit 

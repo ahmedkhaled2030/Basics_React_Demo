@@ -1,0 +1,3 @@
+    <StyledButton as="a"  variant="outline">Styled Button</StyledButton>
+
+    >>as="a" : you can inspect now and the button will be anchor

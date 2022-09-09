@@ -1,0 +1,58 @@
+
+
+------------------------<<<<<<<<<useEffect>>>>>>>>>---------------------
+------------------------------------------------------------------------
+>side effects 
+1-updating the Dom fetching data from an API endpoint 
+2- setting up subscriptions
+3- timers 
+
+------------------------------------------------------------------------
+1-handle side effects
+2-replace the componentDidMount() (compiled into the useEffect)
+3-replace the componentUpdateMount() (compiled into the useEffect) 
+but if there is no difference in state it runs only one time
+4-replace the componentWillUnMount() (compiled into the useEffect)
+-------------------------------------------------------------------------
+
+**use effect hook is called after every
+single render in some cases applying the
+effect after every render might create a
+performance problem so we need a way to
+conditionally run an effect from a
+functional component 
+
+1*  useEffect(() => {
+    console.log('inside useEffect 2');
+    document.title = `You have clicked ${counter} times`;
+  }// called without Dependancies);
+-- in case of no dependancies useEffect will be called every time
+**********************
+2*  useEffect(() => {
+    console.log('inside useEffect 2');
+    document.title = `You have clicked ${counter} times`;
+  }, [] // called dependancies);
+
+1-- that it is a common beginners mistake to leave out
+the dependency list.
+
+2--  in case of no dependancies useEffect will be called in mount only
+*********************
+3*  useEffect(() => {
+    console.log('inside useEffect 2');
+    document.title = `You have clicked ${counter} times`;
+  }, [counter] // called dependancies);
+--in case of no dependancies useEffect will be called if counter is modified
+ 
+---------------------------------------------------------------------------------
+
+  cleanUp Function  => componentWillUnMount()
+   useEffect(() => {
+    console.log('inside useEffect 1');
+    document.title = title;
+
+    return () => { ///////////=> componentWillUnMount() //////////
+        window.removeEventListener(== , ===)
+    };
+  }, [title]);
+-----------------------------------------------------------------------------------

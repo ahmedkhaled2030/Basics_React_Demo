@@ -1,0 +1,5 @@
+usecallback for making a performance better
+لو عندي خمس زراير بيعملوا نفس العمليه لكن بيزودوا كاونتر بارقام مختلفه فكان 
+بيخلي كل شويه الفنكشن تتنده كتير وهنا جه دور الدرس
+Memoization => caching for any function don't change
+so in React (React.memo)
